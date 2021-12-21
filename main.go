@@ -38,9 +38,50 @@ func main() {
 	// fmt.Println(strconv.ParseInt("15", 10, 64))
 
 	var name string
+	var age int
+	var month int
 
 	fmt.Print("What is your name? ")
 	fmt.Scan(&name)
 
-	fmt.Println("Hello, " + name + "!")
+	fmt.Print("How old are you? ")
+	fmt.Scan(&age)
+
+	if age >= 18 {
+		fmt.Println("Hello, " + name + "!")
+	} else {
+		fmt.Println("Bye, " + name + ".")
+	}
+
+	fmt.Print("What month of your brith? ")
+	fmt.Scan(&month)
+
+	switch month {
+	case 1:
+		fmt.Println("You were born in January.")
+	case 2:
+		fmt.Println("You were born in February.")
+	case 3:
+		fmt.Println("You were born in March.")
+	case 4:
+		fmt.Println("You were born in April.")
+	case 5:
+		fmt.Println("You were born in May.")
+	case 6:
+		fmt.Println("You were born in June.")
+	case 7:
+		fmt.Println("You were born in July.")
+	case 8:
+		fmt.Println("You were born in August.")
+	case 9:
+		fmt.Println("You were born in September.")
+	case 10:
+		fmt.Println("You were born in October.")
+	case 11:
+		fmt.Println("You were born in November.")
+	case 12:
+		fmt.Println("You were born in December.")
+	default:
+		fmt.Println("Bye, " + name + ".")
+	}
 }
