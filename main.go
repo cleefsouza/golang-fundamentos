@@ -40,12 +40,13 @@ func main() {
 	var name string
 	var age int
 	var month int
+	var number int
 
 	fmt.Print("What is your name? ")
-	fmt.Scan(&name)
+	fmt.Scanf("%s", &name)
 
 	fmt.Print("How old are you? ")
-	fmt.Scan(&age)
+	fmt.Scanf("%d", &age)
 
 	if age >= 18 {
 		fmt.Println("Hello, " + name + "!")
@@ -54,7 +55,7 @@ func main() {
 	}
 
 	fmt.Print("What month of your brith? ")
-	fmt.Scan(&month)
+	fmt.Scanf("%d", &month)
 
 	switch month {
 	case 1:
@@ -83,5 +84,12 @@ func main() {
 		fmt.Println("You were born in December.")
 	default:
 		fmt.Println("Bye, " + name + ".")
+	}
+
+	fmt.Print("Enter a number: ")
+	fmt.Scanf("%d", &number)
+
+	for i := 1; i <= 10; i++ {
+		fmt.Println(number, "x", i, "=", number*i)
 	}
 }
